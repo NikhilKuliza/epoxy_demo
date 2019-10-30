@@ -27,7 +27,7 @@ class HomeRepository {
     private fun getRandumData() : ArrayList<HomeModel> {
         val list = ArrayList<HomeModel>()
 
-        for (i in 1..12) {
+        for (i in 1..20) {
             val number = getRandumNumber()
             Log.d("HomeRepo", "Randum Value : $number")
 
