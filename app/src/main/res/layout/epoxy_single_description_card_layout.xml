@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable name="text" type="String"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten_dp"
+                android:background="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/five_dp">
+
+            <TextView
+                    android:id="@+id/single_desc_card_titleTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:text="@{text}"
+                    android:padding="@dimen/ten_dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>
+
+
