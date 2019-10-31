@@ -1,42 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout >
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable name="title"
                   type="String"/>
     </data>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_margin="@dimen/ten_dp"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="@dimen/ten_dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#babcbf">
 
-    <ImageView
-        android:id="@+id/item_carousel_logo"
-        android:padding="@dimen/ten_dp"
-        android:layout_weight="1"
-        android:layout_width="@dimen/hundred_dp"
-        android:layout_height="@dimen/hundred_dp"
-        android:src="@drawable/images"
-        android:contentDescription="@null"
+        <ImageView
+                android:id="@+id/item_carousel_logo"
+                android:padding="@dimen/ten_dp"
+                android:layout_width="@dimen/hundred_dp"
+                android:layout_height="@dimen/hundred_dp"
+                android:src="@drawable/images"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:id="@+id/item_carousel_title"
+                android:gravity="center"
+                tools:text="Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{title}"
+                android:maxLines="2"
+                app:layout_constraintTop_toBottomOf="@+id/item_carousel_logo"
+                app:layout_constraintEnd_toEndOf="@+id/item_carousel_logo"
+                app:layout_constraintStart_toStartOf="@+id/item_carousel_logo"
         />
-    <TextView
-        android:id="@+id/item_carousel_title"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@{title}"
-        android:maxLines="2"/>
 
-    <Button
-        android:gravity="center"
-        android:layout_margin="@dimen/ten_dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:background="@drawable/rounded_background"
-        android:text="@string/test"/>
+        <Button
+                android:gravity="center"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_background"
+                android:text="@string/test"
+                android:id="@+id/button"
+                app:layout_constraintTop_toBottomOf="@+id/item_carousel_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"/>
 
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </layout>
+</layout>

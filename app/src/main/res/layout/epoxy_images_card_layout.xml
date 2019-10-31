@@ -44,6 +44,7 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="#dee3cf"
                         android:padding="@dimen/ten_dp">
 
                     <ImageView
@@ -60,8 +61,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@{text1}"
+                            android:textColor="#000"
                             android:maxLines="2"/>
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -69,6 +70,7 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="#9faced"
                         android:padding="@dimen/ten_dp">
 
                     <ImageView
@@ -85,6 +87,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@{text2}"
+                            android:textColor="#000"
                             android:maxLines="2"/>
 
                 </LinearLayout>

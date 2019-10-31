@@ -2,12 +2,9 @@ package com.example.epoxydemo.ui.controller
 
 import android.content.Context
 import com.airbnb.epoxy.*
-import com.example.epoxydemo.CarouselCardItemLayoutBindingModel_
-import com.example.epoxydemo.imageDescriptionCardLayout
-import com.example.epoxydemo.imagesCardLayout
+import com.example.epoxydemo.*
 import com.example.epoxydemo.model.HomeModel
 import com.example.epoxydemo.model.SequenceType
-import com.example.epoxydemo.singleDescriptionCardLayout
 
 
 class HomeDataController(var context: Context) : TypedEpoxyController<List<HomeModel>>() {
@@ -20,6 +17,12 @@ class HomeDataController(var context: Context) : TypedEpoxyController<List<HomeM
             when (homeModel.sequenceType) {
 
                 SequenceType.TYPE1 -> {
+
+                    headerRow {
+                        ++dummyId
+                        id("Header_$dummyId")
+                        headerText("Carousel Header")
+                    }
 
                     carousel {
                         ++dummyId
@@ -64,6 +67,14 @@ class HomeDataController(var context: Context) : TypedEpoxyController<List<HomeM
             }
         }
     }
+
+
+
+
+
+
+
+
 
 
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -52,6 +53,7 @@
                         android:maxLines="10"
                         android:ellipsize="end"
                         android:text="@{text}"
+                        tools:text="This is demo text to show in UI"
                         app:layout_constraintStart_toEndOf="@+id/image_desc_card_logoIV"
                         android:layout_marginStart="16dp"
                         android:layout_marginLeft="16dp"
